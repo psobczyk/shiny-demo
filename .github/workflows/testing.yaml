@@ -26,6 +26,6 @@ jobs:
           R -e 'install.packages(c("testthat", "devtools", "renv"))'
           R -e 'renv::restore()'
 
-      - name: Tests
-        run: devtools::test()  
+      - name: testing
+        run: testthat::test_dir("tests")
         shell: Rscript {0}
