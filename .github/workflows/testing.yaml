@@ -23,8 +23,8 @@ jobs:
 
       - name: install packages
         run: |
-          R -e 'install.package(c("testthat", "devtools", "renv"))
-          R -e 'renv::restore()`
+          R -e 'install.package(c("testthat", "devtools", "renv"))'
+          R -e 'renv::restore()'
 
       - name: Tests
         run: devtools::test()  

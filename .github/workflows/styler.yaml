@@ -23,7 +23,7 @@ jobs:
 
       - name: install packages
         run: |
-          R -e 'install.package("styler")
+          R -e 'install.package("styler")'
 
       - name: Query dependencies
         run: |
