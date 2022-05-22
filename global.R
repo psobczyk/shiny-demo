@@ -1,10 +1,12 @@
 
+
+library(dplyr)
 source('helpers.R')
 
 
 # Loading
 teryt <- read.csv2('data/TERC_Urzedowy_2022-02-10.csv', encoding = "CP-1250")
-zgony <- read.csv2("../shiny/data/ewp_dsh_zgony_po_szczep_20220127.csv")
+zgony <- read.csv2("data/ewp_dsh_zgony_po_szczep_20220127.csv")
 ludnosc <- read.csv2("data/pl_lud_2021_00_04_k2.csv", skip=5) %>%
   filter(!is.na(Ogółem)) %>%
   mutate(ROCZNIKI.URODZENIA = if_else(ROCZNIKI.URODZENIA == "1921 i wcześniej", "1921", ROCZNIKI.URODZENIA),
